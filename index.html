@@ -1,17 +1,23 @@
+
 <!DOCTYPE html>
 <html>
     <head>
         <title>Ricar Do It</title>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="style.css" />
     </head>
     <body background="ricardo.gif">
-        
+        <div id="styledyn"></div>
         
            <center>
-				<audio controls autoplay loop>
-				  <source src="u got that.mp3" type="audio/mp3">
-				</audio>
+    <script>
+    var audio = new Audio('./u got that.mp3');
+    function playo(){
+    audio.play();
+    audio.loop="true"
+    document.getElementById('styledyn').innerHTML = '<style>#bt{display:none}</style>';
+    } 
+</script>
+				<img id="bt" onclick="playo()" alt="Play Ricardo's song" src="playbtn.png" style="height:100px; background-color:white; padding:10px; border-radius:100%; cursor:pointer;" />
                 </center>
     </body>
         </html>
